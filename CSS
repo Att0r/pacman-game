@@ -1,0 +1,329 @@
+#body{
+  background-color: black;
+  margin: 0px;
+}
+
+#worldBorder{
+  width: 1060px;
+  height: 1200px;
+  style: display: none;
+  display: inline-block;
+}
+
+#world{
+  display: inline-block;
+  style: display: none;
+}
+
+
+#pacman{
+  background-image: url("pacman1.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  style: display: none;
+}
+
+.redGhost{
+  background-image: url("redGhost.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  style: display: none;
+}
+
+.orangeGhost{
+  background-image: url("orangeGhost.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  style: display: none;
+}
+
+.blueGhost{
+  background-image: url("blueGhost.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  style: display: none;
+}
+
+.pinkGhost{
+  background-image: url("pinkGhost.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  style: display: none;
+}
+
+
+#scoreBox{
+  color: white;
+  text-align: center;
+  display: inline-block;
+  vertical-align: top;
+  style: display: none;
+  margin-bottom: 10px;
+  width: 200px;
+  height: 500px;
+
+}
+
+#score{
+  margin-top: -50px;
+  border: 3px solid white;
+  width: 70px;
+  height: 50px;
+  color: white;
+  text-align: center;
+  padding: 8px;
+  display: inline-block;
+  font-size: 40px;
+
+}
+
+#timeTitle{
+  font-size: 25px;
+}
+
+#timer{
+  margin-top: -10px;
+  font-size: 30px;
+  margin-left: 55px;
+  width: 80px;
+  height: 35px;
+  border: 3px solid white;
+}
+
+#livesTitle{
+  padding-top: 20px;
+  font-size: 25px;
+}
+
+.life{
+  background-size: 100%;
+  background-image: url("life.gif");
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 50px;
+}
+
+#life1{
+  margin-left: 10px;
+}
+
+#life2{
+
+}
+
+#life3{
+
+}
+
+
+#scoreTitle{
+  font-size: 25px;
+}
+
+#keyTitle{
+  padding-top: 20px;
+  font-size: 25px;
+}
+
+
+#introScreen{
+font-family: 'VT323', monospace;
+  style: display: none;
+  color: white;
+  margin: 50px;
+  border: 5px solid white;
+  padding: 30px;
+  height: 250px;
+  width: 560px;
+}
+
+#youWinMessage{
+  display: none;
+  color: white;
+  margin: 50px;
+}
+
+#gameOverMessage{
+  display: none;
+  color: white;
+  margin: 50px;
+}
+
+.row div{
+  background-size: 100%;
+  /*border: 1px solid black;*/
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
+
+.brick{
+  background-color: blue;
+}
+
+.coin{
+  background-image: url("coin.gif");
+  background-repeat: no-repeat;
+}
+
+.key{
+  background-size: 100%;
+  background-image: url("key.gif");
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 50px;
+}
+
+
+
+#key1{
+  margin-left: 10px;
+}
+
+#key2{
+
+
+}
+
+#key3{
+
+}
+
+#key4{
+  margin-left: 10px;
+
+}
+
+#key5{
+
+}
+
+#key6{
+
+}
+
+#key7{
+  margin-left: 10px;
+
+}
+
+#key8{
+
+}
+
+#key9{
+
+}
+
+.empty{
+}
+
+
+
+.myButton{
+display: inline-block;
+-webkit-box-sizing: content-box;
+-moz-box-sizing: content-box;
+box-sizing: content-box;
+float: none;
+z-index: auto;
+width: auto;
+height: auto;
+position: static;
+cursor: pointer;
+opacity: 1;
+margin: 0;
+padding: 0 20px;
+overflow: visible;
+border: none;
+-webkit-border-radius: 20px;
+border-radius: 20px;
+font: normal normal bold 20px/40px "Baumans", Helvetica, sans-serif;
+color: black;
+-o-text-overflow: clip;
+text-overflow: clip;
+background: rgb(221, 221, 221);
+-webkit-box-shadow: 0 1px 0 0 rgb(119,119,119) , 0 2px 0 0 rgb(119,119,119) , 0 3px 0 0 rgb(119,119,119) , 0 4px 0 0 rgb(119,119,119) , 0 5px 0 0 rgb(119,119,119) , 0 6px 0 0 rgb(119,119,119) , 0 0 5px 0 rgba(0,0,0,0.0980392) , 0 1px 3px 0 rgba(0,0,0,0.298039) , 0 3px 5px 0 rgba(0,0,0,0.2) , 0 5px 10px 0 rgba(0,0,0,0.247059) , 0 10px 10px 0 rgba(0,0,0,0.2) , 0 20px 20px 0 rgba(0,0,0,0.14902) ;
+box-shadow: 0 1px 0 0 rgb(119,119,119) , 0 2px 0 0 rgb(119,119,119) , 0 3px 0 0 rgb(119,119,119) , 0 4px 0 0 rgb(119,119,119) , 0 5px 0 0 rgb(119,119,119) , 0 6px 0 0 rgb(119,119,119) , 0 0 5px 0 rgba(0,0,0,0.0980392) , 0 1px 3px 0 rgba(0,0,0,0.298039) , 0 3px 5px 0 rgba(0,0,0,0.2) , 0 5px 10px 0 rgba(0,0,0,0.247059) , 0 10px 10px 0 rgba(0,0,0,0.2) , 0 20px 20px 0 rgba(0,0,0,0.14902) ;
+text-shadow: 0 1px 0 #FFFFFF ;
+-webkit-transition: none;
+-moz-transition: none;
+-o-transition: none;
+transition: none;
+-webkit-transform: none;
+transform: none;
+-webkit-transform-origin: 50% 50% 0;
+transform-origin: 50% 50% 0;
+}
+
+/*.myButton {
+  -moz-box-shadow:inset 0px 1px 0px 0px #cf866c;
+  -webkit-box-shadow:inset 0px 1px 0px 0px #cf866c;
+  box-shadow:inset 0px 1px 0px 0px #cf866c;
+  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #d0451b), color-stop(1, #bc3315));
+  background:-moz-linear-gradient(top, #d0451b 5%, #bc3315 100%);
+  background:-webkit-linear-gradient(top, #d0451b 5%, #bc3315 100%);
+  background:-o-linear-gradient(top, #d0451b 5%, #bc3315 100%);
+  background:-ms-linear-gradient(top, #d0451b 5%, #bc3315 100%);
+  background:linear-gradient(to bottom, #d0451b 5%, #bc3315 100%);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#d0451b', endColorstr='#bc3315',GradientType=0);
+  background-color:#d0451b;
+  -moz-border-radius:10px;
+  -webkit-border-radius:10px;
+  border-radius:10px;
+  border:1px solid #942911;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family:Arial;
+  font-size:19px;
+  padding:19px 24px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #854629;
+}
+
+.myButton:hover {
+  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #bc3315), color-stop(1, #d0451b));
+  background:-moz-linear-gradient(top, #bc3315 5%, #d0451b 100%);
+  background:-webkit-linear-gradient(top, #bc3315 5%, #d0451b 100%);
+  background:-o-linear-gradient(top, #bc3315 5%, #d0451b 100%);
+  background:-ms-linear-gradient(top, #bc3315 5%, #d0451b 100%);
+  background:linear-gradient(to bottom, #bc3315 5%, #d0451b 100%);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#bc3315', endColorstr='#d0451b',GradientType=0);
+  background-color:#bc3315;
+
+}
+.myButton:active {
+  position:relative;
+  top:1px;
+}*/
+
+.pacmanImg{
+  height: 150px;
+  width: 150px;
+  display: inline-block;
+}
+
+.buttonBox{
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 50px;
+  margin-left: 30px;
+
+
+}
