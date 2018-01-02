@@ -17,7 +17,7 @@
 
 
 #pacman{
-  background-image: url("pacman1.gif");
+  background-image: url("images/pacman1.gif");
   background-repeat: no-repeat;
   background-size: cover;
   width: 20px;
@@ -27,7 +27,7 @@
 }
 
 .redGhost{
-  background-image: url("redGhost.gif");
+  background-image: url("images/redGhost.gif");
   background-repeat: no-repeat;
   background-size: cover;
   width: 20px;
@@ -37,7 +37,7 @@
 }
 
 .orangeGhost{
-  background-image: url("orangeGhost.gif");
+  background-image: url("images/orangeGhost.gif");
   background-repeat: no-repeat;
   background-size: cover;
   width: 20px;
@@ -47,7 +47,7 @@
 }
 
 .blueGhost{
-  background-image: url("blueGhost.gif");
+  background-image: url("images/blueGhost.gif");
   background-repeat: no-repeat;
   background-size: cover;
   width: 20px;
@@ -57,7 +57,7 @@
 }
 
 .pinkGhost{
-  background-image: url("pinkGhost.gif");
+  background-image: url("images/pinkGhost.gif");
   background-repeat: no-repeat;
   background-size: cover;
   width: 20px;
@@ -112,7 +112,7 @@
 
 .life{
   background-size: 100%;
-  background-image: url("life.gif");
+  background-image: url("images/life.gif");
   background-repeat: no-repeat;
   width: 50px;
   height: 50px;
@@ -177,13 +177,13 @@ font-family: 'VT323', monospace;
 }
 
 .coin{
-  background-image: url("coin.gif");
+  background-image: url("images/coin.gif");
   background-repeat: no-repeat;
 }
 
 .key{
   background-size: 100%;
-  background-image: url("key.gif");
+  background-image: url("images/key.gif");
   background-repeat: no-repeat;
   width: 50px;
   height: 50px;
