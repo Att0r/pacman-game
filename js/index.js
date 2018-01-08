@@ -710,7 +710,7 @@ window.setInterval(function(){
         displayPinkGhost1();
         if(pinkGhost1.x == pacman.x && pinkGhost1.y == pacman.y){
           pacmanGotHit = true;
-          gameOverCheckPoint2();
+          gameOver();
           }
     } else if((world[pinkGhost1.y][pinkGhost1.x + 1] == 2)){
       pinkGhost1.y++;
@@ -723,7 +723,7 @@ window.setInterval(function(){
         displayPinkGhost1();
         if(pinkGhost1.x == pacman.x && pinkGhost1.y == pacman.y){
           pacmanGotHit = true;
-          gameOverCheckPoint2();
+          gameOver();
           }
     } else if((world[pinkGhost1.y + 1][pinkGhost1.x] == 2)){
       pinkGhost1.x--;
@@ -736,7 +736,7 @@ window.setInterval(function(){
         displayPinkGhost1();
         if(pinkGhost1.x == pacman.x && pinkGhost1.y == pacman.y){
           pacmanGotHit = true;
-          gameOverCheckPoint2();
+          gameOver();
           }
     } else if((world[pinkGhost1.y][pinkGhost1.x - 1] == 2)){
       pinkGhost1.y--;
@@ -749,7 +749,7 @@ window.setInterval(function(){
         displayPinkGhost1();
         if(pinkGhost1.x == pacman.x && pinkGhost1.y == pacman.y){
           pacmanGotHit = true;
-          gameOverCheckPoint2();
+          gameOver();
           }
     } else if((world[pinkGhost1.y - 1][pinkGhost1.x] == 2)){
       pinkGhost1.x++;
@@ -768,7 +768,7 @@ window.setInterval(function(){
         displayOrangeGhost1();
         if(orangeGhost1.x == pacman.x && orangeGhost1.y == pacman.y){
           pacmanGotHit = true;
-          gameOverCheckPoint2();
+          gameOver();
           }
     } else if((world[orangeGhost1.y][orangeGhost1.x + 1] == 2)){
       orangeGhost1.y++;
@@ -781,7 +781,7 @@ window.setInterval(function(){
         displayOrangeGhost1();
         if(orangeGhost1.x == pacman.x && orangeGhost1.y == pacman.y){
           pacmanGotHit = true;
-          gameOverCheckPoint2();
+          gameOver();
           }
     } else if((world[orangeGhost1.y + 1][orangeGhost1.x] == 2)){
       orangeGhost1.x--;
@@ -794,7 +794,7 @@ window.setInterval(function(){
         displayOrangeGhost1();
         if(orangeGhost1.x == pacman.x && orangeGhost1.y == pacman.y){
           pacmanGotHit = true;
-          gameOverCheckPoint2();
+          gameOver();
           }
     } else if((world[orangeGhost1.y][orangeGhost1.x - 1] == 2)){
       orangeGhost1.y--;
@@ -807,7 +807,7 @@ window.setInterval(function(){
         displayOrangeGhost1();
         if(orangeGhost1.x == pacman.x && orangeGhost1.y == pacman.y){
           pacmanGotHit = true;
-          gameOverCheckPoint2();
+          gameOver();
           }
     } else if((world[orangeGhost1.y - 1][orangeGhost1.x] == 2)){
       orangeGhost1.x++;
@@ -826,7 +826,7 @@ window.setInterval(function(){
         displayBlueGhost1();
         if(blueGhost1.x == pacman.x && blueGhost1.y == pacman.y){
           pacmanGotHit = true;
-          gameOverCheckPoint2();
+          gameOver();
           }
     } else if((world[blueGhost1.y][blueGhost1.x + 1] == 2)){
       blueGhost1.y++;
@@ -839,7 +839,7 @@ window.setInterval(function(){
         displayBlueGhost1();
         if(blueGhost1.x == pacman.x && blueGhost1.y == pacman.y){
           pacmanGotHit = true;
-          gameOverCheckPoint2();
+          gameOver();
           }
     } else if((world[blueGhost1.y + 1][blueGhost1.x] == 2)){
       blueGhost1.x--;
@@ -852,7 +852,7 @@ window.setInterval(function(){
         displayBlueGhost1();
         if(blueGhost1.x == pacman.x && blueGhost1.y == pacman.y){
           pacmanGotHit = true;
-          gameOverCheckPoint2();
+          gameOver();
           }
     } else if((world[blueGhost1.y][blueGhost1.x - 1] == 2)){
       blueGhost1.y--;
@@ -865,7 +865,7 @@ window.setInterval(function(){
         displayBlueGhost1();
         if(blueGhost1.x == pacman.x && blueGhost1.y == pacman.y){
           pacmanGotHit = true;
-          gameOverCheckPoint2();
+          gameOver();
           }
     } else if((world[blueGhost1.y - 1][blueGhost1.x] == 2)){
       blueGhost1.x++;
@@ -1886,7 +1886,7 @@ if(blueGhost.x == pacman.x && blueGhost.y == pacman.y){
 displayPacman();
 if(blueGhost1.x == pacman.x && blueGhost1.y == pacman.y){
   pacmanGotHit = true;
-  gameOverCheckPoint2();
+  gameOver();
 }
 displayPacman();
 if(blueGhost2.x == pacman.x && blueGhost2.y == pacman.y){
