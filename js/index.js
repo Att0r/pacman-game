@@ -6,7 +6,7 @@ var keysFound = 0;
 var score = 0;
 var pacmanLives = 4;
 
-var timeLeft = 180;
+var timeLeft = 240;
 var elem = document.getElementById('timer');
 
 var timerId = setInterval(countdown, 1000);
@@ -30,8 +30,9 @@ function lives() {
       }
   if (pacmanLives === 1){
     life1.style.display = "none";
+    noLivesText.style.display = "inline-block";
       }
-    }
+}
 
 
 var introHide = document.getElementById("introScreen");
@@ -378,7 +379,7 @@ window.setInterval(function(){
     }
   }
 
-}, 75);
+}, 150);
 
 window.setInterval(function(){
   // console.log("moving!"
@@ -442,7 +443,7 @@ window.setInterval(function(){
     }
   }
 
-}, 200);
+}, 250);
 
 window.setInterval(function(){
   // console.log("moving!"
@@ -474,7 +475,7 @@ window.setInterval(function(){
     }
   }
 
-}, 500);
+}, 1200);
 
 
 window.setInterval(function(){
@@ -580,7 +581,7 @@ window.setInterval(function(){
         orangeGhost4.x++;
         displayOrangeGhost4();
         if(orangeGhost4.x == pacman.x && orangeGhost4.y == pacman.y){
-          gameOver();
+          gameOverCheckPoint();
           }
     } else if((world[orangeGhost4.y][orangeGhost4.x + 1] == 2)){
       orangeGhost4.x--;
@@ -593,7 +594,7 @@ window.setInterval(function(){
         displayOrangeGhost4();
         if(orangeGhost4.x == pacman.x && orangeGhost4.y == pacman.y){
           pacmanGotHit = true;
-          gameOver();
+          gameOverCheckPoint();
 
           }
     } else if((world[orangeGhost4.y][orangeGhost4.x - 1] == 2)){
@@ -644,7 +645,7 @@ window.setInterval(function(){
         pinkGhost4.y++;
         displayPinkGhost4();
         if(pinkGhost4.x == pacman.x && pinkGhost4.y == pacman.y){
-          gameOver();
+          gameOverCheckPoint();
           }
     } else if((world[pinkGhost4.y + 1][pinkGhost4.x] == 2)){
       pinkGhost4.y--;
@@ -657,7 +658,7 @@ window.setInterval(function(){
         displayPinkGhost4();
         if(pinkGhost4.x == pacman.x && pinkGhost4.y == pacman.y){
           pacmanGotHit = true;
-          gameOver();
+          gameOverCheckPoint();
 
           }
     } else if((world[pinkGhost4.y - 1][pinkGhost4.x] == 2)){
@@ -699,7 +700,7 @@ window.setInterval(function(){
     }
   }
 
-}, 90);
+}, 150);
 
 window.setInterval(function(){
   // console.log("moving!"
@@ -709,7 +710,7 @@ window.setInterval(function(){
         displayPinkGhost1();
         if(pinkGhost1.x == pacman.x && pinkGhost1.y == pacman.y){
           pacmanGotHit = true;
-          gameOver();
+          gameOverCheckPoint2();
           }
     } else if((world[pinkGhost1.y][pinkGhost1.x + 1] == 2)){
       pinkGhost1.y++;
@@ -722,7 +723,7 @@ window.setInterval(function(){
         displayPinkGhost1();
         if(pinkGhost1.x == pacman.x && pinkGhost1.y == pacman.y){
           pacmanGotHit = true;
-          gameOver();
+          gameOverCheckPoint2();
           }
     } else if((world[pinkGhost1.y + 1][pinkGhost1.x] == 2)){
       pinkGhost1.x--;
@@ -735,7 +736,7 @@ window.setInterval(function(){
         displayPinkGhost1();
         if(pinkGhost1.x == pacman.x && pinkGhost1.y == pacman.y){
           pacmanGotHit = true;
-          gameOver();
+          gameOverCheckPoint2();
           }
     } else if((world[pinkGhost1.y][pinkGhost1.x - 1] == 2)){
       pinkGhost1.y--;
@@ -748,7 +749,7 @@ window.setInterval(function(){
         displayPinkGhost1();
         if(pinkGhost1.x == pacman.x && pinkGhost1.y == pacman.y){
           pacmanGotHit = true;
-          gameOver();
+          gameOverCheckPoint2();
           }
     } else if((world[pinkGhost1.y - 1][pinkGhost1.x] == 2)){
       pinkGhost1.x++;
@@ -767,7 +768,7 @@ window.setInterval(function(){
         displayOrangeGhost1();
         if(orangeGhost1.x == pacman.x && orangeGhost1.y == pacman.y){
           pacmanGotHit = true;
-          gameOver();
+          gameOverCheckPoint2();
           }
     } else if((world[orangeGhost1.y][orangeGhost1.x + 1] == 2)){
       orangeGhost1.y++;
@@ -780,7 +781,7 @@ window.setInterval(function(){
         displayOrangeGhost1();
         if(orangeGhost1.x == pacman.x && orangeGhost1.y == pacman.y){
           pacmanGotHit = true;
-          gameOver();
+          gameOverCheckPoint2();
           }
     } else if((world[orangeGhost1.y + 1][orangeGhost1.x] == 2)){
       orangeGhost1.x--;
@@ -793,7 +794,7 @@ window.setInterval(function(){
         displayOrangeGhost1();
         if(orangeGhost1.x == pacman.x && orangeGhost1.y == pacman.y){
           pacmanGotHit = true;
-          gameOver();
+          gameOverCheckPoint2();
           }
     } else if((world[orangeGhost1.y][orangeGhost1.x - 1] == 2)){
       orangeGhost1.y--;
@@ -806,7 +807,7 @@ window.setInterval(function(){
         displayOrangeGhost1();
         if(orangeGhost1.x == pacman.x && orangeGhost1.y == pacman.y){
           pacmanGotHit = true;
-          gameOver();
+          gameOverCheckPoint2();
           }
     } else if((world[orangeGhost1.y - 1][orangeGhost1.x] == 2)){
       orangeGhost1.x++;
@@ -825,7 +826,7 @@ window.setInterval(function(){
         displayBlueGhost1();
         if(blueGhost1.x == pacman.x && blueGhost1.y == pacman.y){
           pacmanGotHit = true;
-          gameOver();
+          gameOverCheckPoint2();
           }
     } else if((world[blueGhost1.y][blueGhost1.x + 1] == 2)){
       blueGhost1.y++;
@@ -838,7 +839,7 @@ window.setInterval(function(){
         displayBlueGhost1();
         if(blueGhost1.x == pacman.x && blueGhost1.y == pacman.y){
           pacmanGotHit = true;
-          gameOver();
+          gameOverCheckPoint2();
           }
     } else if((world[blueGhost1.y + 1][blueGhost1.x] == 2)){
       blueGhost1.x--;
@@ -851,7 +852,7 @@ window.setInterval(function(){
         displayBlueGhost1();
         if(blueGhost1.x == pacman.x && blueGhost1.y == pacman.y){
           pacmanGotHit = true;
-          gameOver();
+          gameOverCheckPoint2();
           }
     } else if((world[blueGhost1.y][blueGhost1.x - 1] == 2)){
       blueGhost1.y--;
@@ -864,7 +865,7 @@ window.setInterval(function(){
         displayBlueGhost1();
         if(blueGhost1.x == pacman.x && blueGhost1.y == pacman.y){
           pacmanGotHit = true;
-          gameOver();
+          gameOverCheckPoint2();
           }
     } else if((world[blueGhost1.y - 1][blueGhost1.x] == 2)){
       blueGhost1.x++;
@@ -873,7 +874,7 @@ window.setInterval(function(){
   }
 }
 
-}, 90);
+}, 300);
 
 window.setInterval(function(){
 // console.log("moving!"
@@ -999,7 +1000,7 @@ if(world[redGhost6.y][redGhost6.x + 1] != 2){
   displayRedGhost6();
   if(redGhost6.x == pacman.x && redGhost6.y == pacman.y){
     pacmanGotHit = true;
-    gameOver();
+    gameOverCheckPoint();
     }
 } else if((world[redGhost6.y][redGhost6.x + 1] == 2)){
 redGhost6.y++;
@@ -1012,7 +1013,7 @@ if(world[redGhost6.y + 1][redGhost6.x] != 2){
   displayRedGhost6();
   if(redGhost6.x == pacman.x && redGhost6.y == pacman.y){
     pacmanGotHit = true;
-    gameOver();
+    gameOverCheckPoint();
     }
 } else if((world[redGhost6.y + 1][redGhost6.x] == 2)){
 redGhost6.x--;
@@ -1025,7 +1026,7 @@ if(world[redGhost6.y][redGhost6.x - 1] != 2){
   displayRedGhost6();
   if(redGhost6.x == pacman.x && redGhost6.y == pacman.y){
     pacmanGotHit = true;
-    gameOver();
+    gameOverCheckPoint();
     }
 } else if((world[redGhost6.y][redGhost6.x - 1] == 2)){
 redGhost6.y--;
@@ -1038,7 +1039,7 @@ if(world[redGhost6.y - 1][redGhost6.x] != 2){
   displayRedGhost6();
   if(redGhost6.x == pacman.x && redGhost6.y == pacman.y){
     pacmanGotHit = true;
-    gameOver();
+    gameOverCheckPoint();
     }
 } else if((world[redGhost6.y - 1][redGhost6.x] == 2)){
 redGhost6.x++;
@@ -1047,7 +1048,7 @@ displayRedGhost6();
 }
 }
 
-}, 110);
+}, 300);
 
 window.setInterval(function(){
 // console.log("moving!"
@@ -1057,7 +1058,7 @@ blueGhost4.x++;
 displayBlueGhost4();
 if(blueGhost4.x == pacman.x && blueGhost4.y == pacman.y){
   pacmanGotHit = true;
-  gameOver();
+  gameOverCheckPoint();
   }
 } else if((world[blueGhost4.y][blueGhost4.x + 1] == 2)){
 blueGhost4.y++;
@@ -1070,7 +1071,7 @@ blueGhost4.y++;
 displayBlueGhost4();
 if(blueGhost4.x == pacman.x && blueGhost4.y == pacman.y){
   pacmanGotHit = true;
-  gameOver();
+  gameOverCheckPoint();
   }
 } else if((world[blueGhost4.y + 1][blueGhost4.x] == 2)){
 blueGhost4.x--;
@@ -1083,7 +1084,7 @@ blueGhost4.x--;
 displayBlueGhost4();
 if(blueGhost4.x == pacman.x && blueGhost4.y == pacman.y){
   pacmanGotHit = true;
-  gameOver();
+  gameOverCheckPoint();
   }
 } else if((world[blueGhost4.y][blueGhost4.x - 1] == 2)){
 blueGhost4.y--;
@@ -1096,7 +1097,7 @@ blueGhost4.y--;
 displayBlueGhost4();
 if(blueGhost4.x == pacman.x && blueGhost4.y == pacman.y){
   pacmanGotHit = true;
-  gameOver();
+  gameOverCheckPoint();
   }
 } else if((world[blueGhost4.y - 1][blueGhost4.x] == 2)){
 blueGhost4.x++;
@@ -1115,7 +1116,7 @@ orangeGhost5.x++;
 displayOrangeGhost5();
 if(orangeGhost5.x == pacman.x && orangeGhost5.y == pacman.y){
 pacmanGotHit = true;
-gameOver();
+gameOverCheckPoint();
 }
 } else if((world[orangeGhost5.y][orangeGhost5.x + 1] == 2)){
 orangeGhost5.y++;
@@ -1128,7 +1129,7 @@ orangeGhost5.y++;
 displayOrangeGhost5();
 if(orangeGhost5.x == pacman.x && orangeGhost5.y == pacman.y){
 pacmanGotHit = true;
-gameOver();
+gameOverCheckPoint();
 }
 } else if((world[orangeGhost5.y + 1][orangeGhost5.x] == 2)){
 orangeGhost5.x--;
@@ -1141,7 +1142,7 @@ orangeGhost5.x--;
 displayOrangeGhost5();
 if(orangeGhost5.x == pacman.x && orangeGhost5.y == pacman.y){
 pacmanGotHit = true;
-gameOver();
+gameOverCheckPoint();
 }
 } else if((world[orangeGhost5.y][orangeGhost5.x - 1] == 2)){
 orangeGhost5.y--;
@@ -1154,7 +1155,7 @@ orangeGhost5.y--;
 displayOrangeGhost5();
 if(orangeGhost5.x == pacman.x && orangeGhost5.y == pacman.y){
 pacmanGotHit = true;
-gameOver();
+gameOverCheckPoint();
 }
 } else if((world[orangeGhost5.y - 1][orangeGhost5.x] == 2)){
 orangeGhost5.x++;
@@ -1171,19 +1172,19 @@ var world = [
 
 [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
 [2,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,2,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,2],
-[2,0,0,0,0,0,0,0,0,0,2,2,2,2,2,1,2,0,2,1,2,2,2,1,2,2,2,2,1,2,0,0,0,2,0,0,0,0,0,0,0,0,0,2],
-[2,0,0,0,0,3,0,0,0,0,2,1,1,1,2,1,2,0,1,2,1,1,1,2,0,0,0,2,1,2,0,0,0,0,0,0,0,0,0,0,2,0,0,2],
+[2,0,0,0,0,0,0,0,0,0,2,2,2,2,2,1,2,0,2,1,2,2,2,1,2,2,2,2,1,2,0,0,0,2,0,0,1,0,0,0,0,0,0,2],
+[2,0,1,0,0,3,0,0,1,0,2,1,1,1,2,1,2,0,1,2,1,1,1,2,0,0,0,2,1,2,0,0,0,0,0,0,0,0,0,0,2,0,0,2],
 [2,0,0,0,0,0,0,0,0,0,2,1,2,2,2,1,2,0,2,2,2,2,1,2,0,3,0,2,1,1,0,0,0,0,2,2,0,2,2,0,0,0,0,2],
-[2,0,0,0,0,0,0,0,0,0,2,1,2,1,1,1,2,0,1,1,1,1,1,2,0,0,0,2,1,2,0,0,0,0,2,0,0,0,2,0,0,0,0,2],
-[2,0,0,0,0,0,0,0,0,0,2,1,2,1,2,1,2,2,2,2,2,2,1,2,1,0,1,2,2,2,0,0,0,0,0,0,3,0,0,0,0,0,0,2],
+[2,0,0,1,0,0,0,1,0,0,2,1,2,1,1,1,2,0,1,1,1,1,1,2,0,0,0,2,1,2,0,0,0,0,2,0,0,0,2,0,0,0,0,2],
+[2,0,0,0,0,0,0,0,0,0,2,1,2,1,2,1,2,2,2,2,2,2,1,2,1,0,1,2,2,2,0,0,1,0,0,0,3,0,0,0,1,0,0,2],
 [2,2,2,2,2,1,2,2,2,2,2,1,1,1,1,1,1,1,1,1,1,2,1,2,0,1,0,2,1,2,0,0,0,0,2,0,0,0,2,0,0,0,0,2],
 [2,1,1,1,2,1,2,1,1,1,1,1,1,2,2,2,2,2,2,2,1,2,1,2,0,0,0,1,1,2,0,0,0,0,2,2,0,2,2,0,0,0,0,2],
 [2,1,2,1,2,1,2,2,2,2,2,2,2,2,1,1,1,1,1,2,1,2,1,2,0,0,0,2,1,2,0,0,2,0,0,0,0,0,0,0,0,0,0,2],
-[2,1,2,1,2,1,1,1,1,1,1,1,1,2,1,2,2,2,1,2,1,2,1,2,2,2,2,2,1,2,0,0,0,0,0,0,0,0,0,2,0,0,0,2],
+[2,1,2,1,2,1,1,1,1,1,1,1,1,2,1,2,2,2,1,2,1,2,1,2,2,2,2,2,1,2,0,0,0,0,0,0,1,0,0,2,0,0,0,2],
 [2,1,2,1,2,2,2,2,2,2,2,2,1,2,1,2,3,0,1,2,1,2,1,1,1,1,1,1,1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,2],
 [2,1,1,1,1,1,1,1,1,1,1,2,1,2,1,2,2,2,2,2,1,2,2,2,2,2,1,2,1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
 [2,2,2,1,2,2,2,2,0,2,1,2,1,2,1,1,1,1,1,1,1,1,1,1,1,2,1,2,2,1,2,2,2,1,2,2,2,1,2,2,2,1,2,2],
-[2,0,1,1,1,1,1,0,3,2,1,2,1,2,2,2,2,2,2,2,2,2,2,2,1,2,1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2],
+[2,0,0,0,1,1,1,0,3,2,1,2,1,2,2,2,2,2,2,2,2,2,2,2,1,2,1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2],
 [2,2,2,1,2,2,2,2,0,2,1,2,1,1,1,1,1,1,1,1,1,1,1,2,1,2,1,2,1,2,2,1,2,2,2,1,2,2,2,1,2,2,0,2],
 [2,1,1,1,1,1,1,2,1,2,1,2,2,2,2,2,2,2,2,2,2,2,1,2,1,2,1,2,1,2,2,2,2,2,2,2,2,2,2,2,2,2,0,2],
 [2,1,2,2,2,2,1,1,1,2,1,2,1,1,1,1,1,1,1,1,1,2,1,2,1,2,1,2,1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,2],
@@ -1195,7 +1196,7 @@ var world = [
 [2,2,2,1,2,2,2,2,2,2,2,2,2,2,0,0,0,0,0,2,2,2,2,2,1,2,2,2,2,2,0,0,0,0,2,0,0,0,2,0,0,0,0,2],
 [2,0,0,0,0,0,0,0,0,0,0,0,0,2,0,1,0,0,0,2,0,0,0,2,1,2,0,0,0,2,0,0,0,0,2,2,0,2,2,0,0,0,0,2],
 [2,0,1,0,0,0,1,0,0,0,1,0,0,2,0,0,0,0,0,2,0,1,0,0,0,0,0,1,0,2,0,0,2,0,0,0,0,0,0,0,0,0,0,2],
-[2,0,0,0,1,0,0,0,1,0,0,0,0,2,2,2,2,2,2,2,0,1,0,0,3,0,0,1,0,2,0,0,0,0,0,0,1,0,0,2,0,0,0,2],
+[2,0,0,0,1,0,0,0,1,0,0,0,0,2,2,2,2,2,2,2,0,0,1,0,3,0,1,0,0,2,0,0,0,0,0,0,1,0,0,2,0,0,0,2],
 [2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,2,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,2],
 [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2]
 
@@ -1204,7 +1205,7 @@ var world = [
 
 var pacman = {
 x: 1,
-y: 14
+y: 14,
 };
 
 var redGhost = {
@@ -1354,13 +1355,13 @@ var redGhostShow2 = document.getElementById("redGhost2");
 var redGhostShow3 = document.getElementById("redGhost3");
 var redGhostShow4 = document.getElementById("redGhost4");
 var redGhostShow5 = document.getElementById("redGhost5");
-var redGhostShow6 = document.getElementById("redGhost5");
+var redGhostShow6 = document.getElementById("redGhost6");
 var orangeGhostShow = document.getElementById("orangeGhost");
 var orangeGhostShow1 = document.getElementById("orangeGhost1");
 var orangeGhostShow2 = document.getElementById("orangeGhost2");
 var orangeGhostShow3 = document.getElementById("orangeGhost3");
 var orangeGhostShow4 = document.getElementById("orangeGhost4");
-var orangeGhostShow4 = document.getElementById("orangeGhost5");
+var orangeGhostShow5 = document.getElementById("orangeGhost5");
 var blueGhostShow = document.getElementById("blueGhost");
 var blueGhostShow1 = document.getElementById("blueGhost1");
 var blueGhostShow2 = document.getElementById("blueGhost2");
@@ -1370,7 +1371,7 @@ var pinkGhostShow = document.getElementById("pinkGhost");
 var pinkGhostShow1 = document.getElementById("pinkGhost1");
 var pinkGhostShow2 = document.getElementById("pinkGhost2");
 var pinkGhostShow3 = document.getElementById("pinkGhost3");
-var pinkGhostShow3 = document.getElementById("pinkGhost3");
+var pinkGhostShow4 = document.getElementById("pinkGhost4");
 
 
 var scoreBoxShow = document.getElementById("scoreBox");
@@ -1765,27 +1766,34 @@ document.getElementById('score').innerHTML = score;
 
       displayScore();
 
-document.onkeyup = function(movePacman){
-// console.log(movePacman.keyCode);
-if (movePacman.keyCode == 68 && world[pacman.y][pacman.x + 1] != 2){
+      window.addEventListener("keydown", function(e) {
+          // space and arrow keys
+          if([32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
+              e.preventDefault();
+          }
+      }, false);
+
+document.onkeydown = function(movePacman){
+console.log(movePacman.keyCode);
+if (movePacman.keyCode == 39 && world[pacman.y][pacman.x + 1] != 2){
   pacmanShow.style.transform = "none";
   pacman.x++;
 }
-else if (movePacman.keyCode == 65 && world[pacman.y][pacman.x - 1] != 2){
+else if (movePacman.keyCode == 37 && world[pacman.y][pacman.x - 1] != 2){
       pacmanShow.style.transform = "none";
   if (pacmanShow.style.transform === "none") {
       pacmanShow.style.transform = "rotate(180deg)";
     }
   pacman.x--;
 }
-else if (movePacman.keyCode == 87 && world[pacman.y - 1][pacman.x] != 2){
+else if (movePacman.keyCode == 38 && world[pacman.y - 1][pacman.x] != 2){
   pacmanShow.style.transform = "none";
 if (pacmanShow.style.transform === "none") {
   pacmanShow.style.transform = "rotate(270deg)";
 }
   pacman.y--;
 }
-else if (movePacman.keyCode == 83 && world[pacman.y+ 1][pacman.x] != 2){
+else if (movePacman.keyCode == 40 && world[pacman.y+ 1][pacman.x] != 2){
   pacmanShow.style.transform = "none";
 if (pacmanShow.style.transform === "none") {
   pacmanShow.style.transform = "rotate(90deg)";
@@ -1878,7 +1886,7 @@ if(blueGhost.x == pacman.x && blueGhost.y == pacman.y){
 displayPacman();
 if(blueGhost1.x == pacman.x && blueGhost1.y == pacman.y){
   pacmanGotHit = true;
-  gameOver();
+  gameOverCheckPoint2();
 }
 displayPacman();
 if(blueGhost2.x == pacman.x && blueGhost2.y == pacman.y){
@@ -1924,6 +1932,165 @@ if(pinkGhost4.x == pacman.x && pinkGhost4.y == pacman.y){
 }
 
 function gameOver(){
+console.log("lives = " + pacmanLives)
+
+if (timeLeft == 0){
+
+console.log("game over!")
+document.getElementById("ghostsOrTimeMessage").innerHTML = "You ran out of time!";
+
+var theScore2 = document.getElementById("gameOverMessage");
+document.getElementById("scoreNum2").innerHTML = "Your final score was " + score  + " points!";
+
+var theScore = document.getElementById("youWinMessage");
+document.getElementById("scoreNum2").innerHTML = "Your final score was " + score  + " points!";
+pacman = {
+  x: 1,
+  y: 14
+};
+
+if (worldShow.style.display === "none") {
+    worldShow.style.display = "block";
+  } else {
+  worldShow.style.display = "none";
+}
+if (worldBorderShow.style.display === "none") {
+    worldBorderShow.style.display = "inline-block";
+  } else {
+  worldBorderShow.style.display = "none";
+}
+if (pacmanShow.style.display === "none") {
+    pacmanShow.style.display = "block";
+  } else {
+  pacmanShow.style.display = "none";
+}
+if (redGhostShow.style.display === "none") {
+    redGhostShow.style.display = "block";
+  } else {
+  redGhostShow.style.display = "none";
+}
+if (redGhostShow1.style.display === "none") {
+    redGhostShow1.style.display = "block";
+  } else {
+  redGhostShow1.style.display = "none";
+}
+if (redGhostShow2.style.display === "none") {
+    redGhostShow2.style.display = "block";
+  } else {
+  redGhostShow2.style.display = "none";
+}
+if (redGhostShow3.style.display === "none") {
+    redGhostShow3.style.display = "block";
+  } else {
+  redGhostShow3.style.display = "none";
+}
+if (redGhostShow4.style.display === "none") {
+    redGhostShow4.style.display = "block";
+  } else {
+  redGhostShow4.style.display = "none";
+}
+if (redGhostShow5.style.display === "none") {
+    redGhostShow5.style.display = "block";
+  } else {
+  redGhostShow5.style.display = "none";
+}
+if (redGhostShow6.style.display === "none") {
+    redGhostShow6.style.display = "block";
+  } else {
+  redGhostShow6.style.display = "none";
+}
+if (orangeGhostShow.style.display === "none") {
+    orangeGhostShow.style.display = "block";
+  } else {
+  orangeGhostShow.style.display = "none";
+}
+if (orangeGhostShow1.style.display === "none") {
+    orangeGhostShow1.style.display = "block";
+  } else {
+  orangeGhostShow1.style.display = "none";
+}
+if (orangeGhostShow2.style.display === "none") {
+    orangeGhostShow2.style.display = "block";
+  } else {
+  orangeGhostShow2.style.display = "none";
+}
+if (orangeGhostShow3.style.display === "none") {
+    orangeGhostShow3.style.display = "block";
+  } else {
+  orangeGhostShow3.style.display = "none";
+}
+if (orangeGhostShow4.style.display === "none") {
+    orangeGhostShow4.style.display = "block";
+  } else {
+  orangeGhostShow4.style.display = "none";
+}
+if (orangeGhostShow5.style.display === "none") {
+    orangeGhostShow5.style.display = "block";
+  } else {
+  orangeGhostShow5.style.display = "none";
+}
+if (blueGhostShow.style.display === "none") {
+    blueGhostShow.style.display = "block";
+  } else {
+  blueGhostShow.style.display = "none";
+}
+if (blueGhostShow1.style.display === "none") {
+    blueGhostShow1.style.display = "block";
+  } else {
+  blueGhostShow1.style.display = "none";
+}
+if (blueGhostShow2.style.display === "none") {
+    blueGhostShow2.style.display = "block";
+  } else {
+  blueGhostShow2.style.display = "none";
+}
+if (blueGhostShow3.style.display === "none") {
+    blueGhostShow3.style.display = "block";
+  } else {
+  blueGhostShow3.style.display = "none";
+}
+if (blueGhostShow4.style.display === "none") {
+    blueGhostShow4.style.display = "block";
+  } else {
+  blueGhostShow4.style.display = "none";
+}
+if (pinkGhostShow.style.display === "none") {
+    pinkGhostShow.style.display = "block";
+  } else {
+  pinkGhostShow.style.display = "none";
+}
+if (pinkGhostShow1.style.display === "none") {
+    pinkGhostShow1.style.display = "block";
+  } else {
+  pinkGhostShow1.style.display = "none";
+}
+if (pinkGhostShow2.style.display === "none") {
+    pinkGhostShow2.style.display = "block";
+  } else {
+  pinkGhostShow2.style.display = "none";
+}
+if (pinkGhostShow3.style.display === "none") {
+    pinkGhostShow3.style.display = "block";
+  } else {
+  pinkGhostShow3.style.display = "none";
+}
+if (pinkGhostShow4.style.display === "none") {
+    pinkGhostShow4.style.display = "block";
+  } else {
+  pinkGhostShow4.style.display = "none";
+}
+
+if (scoreBoxShow.style.display === "none") {
+    scoreBoxShow.style.display = "inline-block";
+  } else {
+  scoreBoxShow.style.display = "none";
+}
+if (gameOverMessage.style.display === "none") {
+    gameOverMessage.style.display = "block";
+  } else {
+  gameOverMessage.style.display = "none";
+  }
+}
 
   if(pacmanLives == 1){
 
@@ -2083,163 +2250,6 @@ function gameOver(){
   }
 }
 
-if (timeLeft == 0){
-
-console.log("game over!")
-document.getElementById("ghostsOrTimeMessage").innerHTML = "You ran out of time!";
-
-var theScore2 = document.getElementById("gameOverMessage");
-document.getElementById("scoreNum2").innerHTML = "Your final score was " + score  + " points!";
-
-var theScore = document.getElementById("youWinMessage");
-document.getElementById("scoreNum2").innerHTML = "Your final score was " + score  + " points!";
-pacman = {
-  x: 1,
-  y: 14
-};
-
-if (worldShow.style.display === "none") {
-    worldShow.style.display = "block";
-  } else {
-  worldShow.style.display = "none";
-}
-if (worldBorderShow.style.display === "none") {
-    worldBorderShow.style.display = "inline-block";
-  } else {
-  worldBorderShow.style.display = "none";
-}
-if (pacmanShow.style.display === "none") {
-    pacmanShow.style.display = "block";
-  } else {
-  pacmanShow.style.display = "none";
-}
-if (redGhostShow.style.display === "none") {
-    redGhostShow.style.display = "block";
-  } else {
-  redGhostShow.style.display = "none";
-}
-if (redGhostShow1.style.display === "none") {
-    redGhostShow1.style.display = "block";
-  } else {
-  redGhostShow1.style.display = "none";
-}
-if (redGhostShow2.style.display === "none") {
-    redGhostShow2.style.display = "block";
-  } else {
-  redGhostShow2.style.display = "none";
-}
-if (redGhostShow3.style.display === "none") {
-    redGhostShow3.style.display = "block";
-  } else {
-  redGhostShow3.style.display = "none";
-}
-if (redGhostShow4.style.display === "none") {
-    redGhostShow4.style.display = "block";
-  } else {
-  redGhostShow4.style.display = "none";
-}
-if (redGhostShow5.style.display === "none") {
-    redGhostShow5.style.display = "block";
-  } else {
-  redGhostShow5.style.display = "none";
-}
-if (redGhostShow6.style.display === "none") {
-    redGhostShow6.style.display = "block";
-  } else {
-  redGhostShow6.style.display = "none";
-}
-if (orangeGhostShow.style.display === "none") {
-    orangeGhostShow.style.display = "block";
-  } else {
-  orangeGhostShow.style.display = "none";
-}
-if (orangeGhostShow1.style.display === "none") {
-    orangeGhostShow1.style.display = "block";
-  } else {
-  orangeGhostShow1.style.display = "none";
-}
-if (orangeGhostShow2.style.display === "none") {
-    orangeGhostShow2.style.display = "block";
-  } else {
-  orangeGhostShow2.style.display = "none";
-}
-if (orangeGhostShow3.style.display === "none") {
-    orangeGhostShow3.style.display = "block";
-  } else {
-  orangeGhostShow3.style.display = "none";
-}
-if (orangeGhostShow4.style.display === "none") {
-    orangeGhostShow4.style.display = "block";
-  } else {
-  orangeGhostShow4.style.display = "none";
-}
-if (orangeGhostShow5.style.display === "none") {
-    orangeGhostShow5.style.display = "block";
-  } else {
-  orangeGhostShow5.style.display = "none";
-}
-if (blueGhostShow.style.display === "none") {
-    blueGhostShow.style.display = "block";
-  } else {
-  blueGhostShow.style.display = "none";
-}
-if (blueGhostShow1.style.display === "none") {
-    blueGhostShow1.style.display = "block";
-  } else {
-  blueGhostShow1.style.display = "none";
-}
-if (blueGhostShow2.style.display === "none") {
-    blueGhostShow2.style.display = "block";
-  } else {
-  blueGhostShow2.style.display = "none";
-}
-if (blueGhostShow3.style.display === "none") {
-    blueGhostShow3.style.display = "block";
-  } else {
-  blueGhostShow3.style.display = "none";
-}
-if (blueGhostShow4.style.display === "none") {
-    blueGhostShow4.style.display = "block";
-  } else {
-  blueGhostShow4.style.display = "none";
-}
-if (pinkGhostShow.style.display === "none") {
-    pinkGhostShow.style.display = "block";
-  } else {
-  pinkGhostShow.style.display = "none";
-}
-if (pinkGhostShow1.style.display === "none") {
-    pinkGhostShow1.style.display = "block";
-  } else {
-  pinkGhostShow1.style.display = "none";
-}
-if (pinkGhostShow2.style.display === "none") {
-    pinkGhostShow2.style.display = "block";
-  } else {
-  pinkGhostShow2.style.display = "none";
-}
-if (pinkGhostShow3.style.display === "none") {
-    pinkGhostShow3.style.display = "block";
-  } else {
-  pinkGhostShow3.style.display = "none";
-}
-if (pinkGhostShow4.style.display === "none") {
-    pinkGhostShow4.style.display = "block";
-  } else {
-  pinkGhostShow4.style.display = "none";
-}
-
-if (scoreBoxShow.style.display === "none") {
-    scoreBoxShow.style.display = "inline-block";
-  } else {
-  scoreBoxShow.style.display = "none";
-}
-if (gameOverMessage.style.display === "none") {
-    gameOverMessage.style.display = "block";
-  } else {
-  gameOverMessage.style.display = "none";
-}
-}
 
 else{
   pacmanLives -= 1;
@@ -2254,9 +2264,101 @@ else{
 }
 }
 
+
+function gameOverCheckPoint(){
+  if(pacmanLives == 1){
+    gameOver();
+  }
+  else{
+    pacmanLives -= 1;
+    console.log("Lost a life! Remaining lives = " + pacmanLives)
+    pacman = {
+      x: 29,
+      y: 4
+    };
+    lives();
+    displayPacman();
+    displayWorld();
+  }
+
+
+
+}
+
+function gameOverCheckPoint2(){
+  if(pacmanLives == 1){
+    gameOver();
+  }
+  else{
+    pacmanLives -= 1;
+    console.log("Lost a life! Remaining lives = " + pacmanLives)
+    pacman = {
+      x: 29,
+      y: 22
+    };
+    lives();
+    displayPacman();
+    displayWorld();
+  }
+
+
+
+}
+
 }
 
 function refreshPage(){
 pacmanGotHit = false;
 window.location.reload();
+}
+
+
+function showWinScreen() {
+
+  var introHide = document.getElementById("introScreen");
+  var worldBorderShow = document.getElementById("worldBorder");
+  var scoreBoxShow = document.getElementById("scoreBox");
+  var youWinMessage = document.getElementById("youWinMessage");
+  var gameOverMessage = document.getElementById("gameOverMessage");
+  var theScore = document.getElementById("youWinMessage");
+
+  document.getElementById("scoreNum").innerHTML = "Your final score was 0 points!";
+
+    introHide.style.display = "none";
+    worldBorderShow.style.display = "none";
+    scoreBoxShow.style.display = "none";
+    youWinMessage.style.display = "block";
+    gameOverMessage.style.display = "none";
+
+}
+
+function showGameOverScreen() {
+
+  var introHide = document.getElementById("introScreen");
+  var worldBorderShow = document.getElementById("worldBorder");
+  var scoreBoxShow = document.getElementById("scoreBox");
+  var youWinMessage = document.getElementById("youWinMessage");
+  var gameOverMessage = document.getElementById("gameOverMessage");
+  var theScore = document.getElementById("youWinMessage");
+  var theScore2 = document.getElementById("gameOverMessage");
+
+  document.getElementById("scoreNum").innerHTML = "Your final score was 0 points!";
+  document.getElementById("ghostsOrTimeMessage").innerHTML = "The ghosts got you!";
+
+  var theScore2 = document.getElementById("gameOverMessage");
+  document.getElementById("scoreNum2").innerHTML = "Your final score was 0 points!";
+
+
+    introHide.style.display = "none";
+    worldBorderShow.style.display = "none";
+    scoreBoxShow.style.display = "none";
+    youWinMessage.style.display = "none";
+    gameOverMessage.style.display = "block";
+
+}
+
+function playAgain(){
+  pacmanGotHit = false;
+  window.location.reload();
+  worldFunction();
 }

@@ -5,6 +5,8 @@
     <title>Pacman game</title>
     <link rel="stylesheet" type="text/css" href="CSS">
     <link async href="http://fonts.googleapis.com/css?family=Baumans" data-generated="http://enjoycss.com" rel="stylesheet" type="text/css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script
       src="https://code.jquery.com/jquery-3.2.1.min.js"
       integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
@@ -49,6 +51,7 @@
 
             <div id="scoreBox" style= "display:none">
 
+              <button type="button" class="returnHomeButton" onClick="refreshPage()">RETURN HOME</button>
 
                <p id="timeTitle">TIME:</p>
 
@@ -58,6 +61,8 @@
                <div id="life1" style= "display:inline-block" ><img class="life"  src="images/life.gif" alt="life"></div>
                <div id="life2" style= "display:inline-block" ><img class="life"  src="images/life.gif" alt="life"></div>
                <div id="life3" style= "display:inline-block" ><img class="life"  src="images/life.gif" alt="life"></div>
+               <h2 id="noLivesText" style= "display:none">None!</h2>
+
                <br>
                <br>
                <p id="scoreTitle">SCORE:</p>
@@ -83,32 +88,58 @@
 
            <div id="introScreen" style= "display:block">
 
-                  <h1>Welcome to my Beginner Pacman game!</h1>
                   <img class="pacmanImg" src="images/pacmanImg.png" alt="">
-                  <div class="buttonBox">
+                  <h1 class="welcome">Welcome to Pacman: Quest for the <a class="keysText">Keys</a>!</h1>
+                  <p>< Best displayed on CHROME browser, in FULL SCREEN ></p>
 
-                      <button class= "myButton" onclick="worldFunction()">CLICK HERE TO PLAY!</button>
+                <h3 class="dash1">></h3>  <button type="button" class="shortCutWinScreenButton" onClick="showWinScreen()">VIEW the YOU WIN! screen</button>
+                <br>
+                <br>
+                <h3 class="dash2">></h3>  <button type="button" class="shortCutGameOverScreenButton" onClick="showGameOverScreen()">VIEW the GAME OVER! screen</button>
 
+
+                  <h5>Hover to display info!</h5>
+                  <div class="arrow bounce"></div>
+                  <div class="arrow bounce"></div>
+                  <div class="arrow bounce"></div>
+
+
+                  <div class="move1">INSTRUCTIONS <i class="fa fa-angle-double-right" style="font-size:23px;vertical-align:top"></i> Navigate pacman around the maze to collect items and avoid ghosts! </div>
+                  <div class="move2"><i class="fa fa-angle-double-left" style="font-size:23px;vertical-align:top"></i> CONTROLS : Use the Up, Down, Left, and Right arrow keys to control pacman!</div>
+                  <div class="move3">HOW TO WIN <i class="fa fa-angle-double-right" style="font-size:23px;vertical-align:top"></i> Collect all 9 keys before time runs out to win the game!</div>
+                  <div class="move4"><i class="fa fa-angle-double-left" style="font-size:23px;vertical-align:top"></i> HIGHSCORE : Collect as many coins as possible to get a highscore!</div>
+
+                <div class="coin"></div>
+                  <div class="wrapper">
+                    <a href="#" class="button" onclick="worldFunction()">CLICK HERE TO PLAY!</a>
                   </div>
-
+                  <div class="coin"></div>
           </div>
 
           <div id="youWinMessage">
 
-                  <h1>You Win!</h1>
+                  <h1>YOU WIN!</h1>
+                  <div class='keyPic' style= "display:inline-block"></div>
+                  <div class='pacmanThumbsUp' style= "display:inline-block"></div>
+                  <h2>Wow you actually won?! Way to go!!!</h2>
                   <h2 id="scoreNum"></h2>
-                  <h2>HIGH SCORE: 3000pts</h2>
-                  <button type="button" onClick="refreshPage()">Play Again?</button>
+                  <h2>HIGHSCORE: 3000pts</h2>
+                  <button type="button" class="playAgainButton1" onClick="refreshPage()">RETURN HOME</button>
 
          </div>
 
          <div id="gameOverMessage">
 
-                  <h1>Game Over!</h1>
+                  <h1>GAME OVER!</h1>
                   <h2 id="ghostsOrTimeMessage"></h2>
+                  <div class='redGhostPic' style= "display:inline-block"></div>
+                  <div class='orangeGhostPic' style= "display:inline-block"></div>
                   <h2 id="scoreNum2"></h2>
-                  <h2>HIGH SCORE: 3000pts</h2>
-                  <button type="button" onClick="refreshPage()">Play Again?</button>
+                  <h2>HIGHSCORE: 3000pts</h2>
+                  <button type="button" class="playAgainButton" onClick="refreshPage()">RETURN HOME</button>
+                  <!-- <button type="button" class="playAgainButton" onClick="worldFunction()">Play Again?</button> -->
+
+
 
         </div>
       </body>
